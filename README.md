@@ -1,6 +1,6 @@
 # Exploring Continual Learning Through Data Diet
 
-![Teaser](teaser.png)
+<img src="teaser.png" alt="Teaser" width="500"/>
 
 ## Introduction
 
