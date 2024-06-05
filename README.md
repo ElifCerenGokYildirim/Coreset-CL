@@ -1,19 +1,19 @@
-# Exploring Continual Learning Through Data Diet
+# Exploring Continual Learning on a Data Diet
 
 <img src="teaser.png" alt="Teaser" width="700"/>
 
 ## Introduction
 
-Existing continual learning (CL) methods learn from all the available data. However, this is not the case in human cognition, which efficiently focuses on key experiences while disregarding redundant information. Similarly, not all data points in a dataset have equal potential; some can be more representative or informative than others. This disparity in data points may significantly impact incremental performance, as both the quality and quantity of samples directly influence the model’s effectiveness and efficiency.
+Continual learning (CL) methods usually learn from all the available data. However, this is not the case in human cognition, which efficiently focuses on key experiences while disregarding redundant information. Similarly, not all data points in a dataset have equal potential; some can be more informative than others. This disparity may significantly impact performance, as both the quality and quantity of samples directly influence the model’s effectiveness and efficiency.
 
-Drawing inspiration from this, we explore the potential of learning from important samples, particularly through the application of coreset selection techniques—a relatively unexplored area in the continual learning literature. Through a comprehensive empirical analysis, we evaluate the performance of various CL learners trained with selected samples and investigate the learning-forgetting dynamics, shedding light on the underlying mechanisms driving their improved stability-plasticity balance.
+Drawing inspiration from this, we explore the potential of learning from important samples, and present a benchmark for evaluating coreset selection techniques in the context of CL to stimulate research in this unexplored area.We train different continual9learners on increasing amounts of selected samples and investigate the learning-forgetting dynamics by shedding light on the underlying mechanisms driving their improved stability-plasticity balance. 
 
 We present several significant observations:
 1. Learning from selectively chosen samples enhances incremental accuracy.
-2. Retaining knowledge.
-3. Improving learned representations of previous tasks.
+2. Retains knowledge.
+3. Improves learned representations of previous tasks.
 
-Our findings contribute to a deeper understanding of selective learning strategies in CL scenarios. We built upon the [PYCIL library](https://github.com/G-U-N/PyCIL) and use [DeepCore](https://github.com/PatrickZH/DeepCore) for the coreset selection methods. We thank these repositories for providing helpful components.
+This benchmark contributes to a deeper understanding of selective learning strategies in CL scenarios. We built upon the [PYCIL library](https://github.com/G-U-N/PyCIL) and use [DeepCore](https://github.com/PatrickZH/DeepCore) for the coreset selection methods. We thank these repositories for providing helpful components.
 
 ## Dependencies
 
@@ -42,12 +42,12 @@ In the `selection` directory, we have implementations of:
 ## Continual Learners
 
 In the `models` directory, we have implementations of:
-- der
-- foster
-- memo
-- icarl
-- er
-- lwf
+- der - architecture
+- foster - architecture
+- memo - architecture
+- icarl - replay
+- er - replay
+- lwf - regularization
 
 ## Run Experiment
 
