@@ -1,17 +1,10 @@
-# Exploring Continual Learning on a Data Diet
+# Continual Learning with Informative Samples: An Empirical Evaluation of Coreset Strategies
 
 <img src="teaser.png" alt="Teaser" width="700"/>
 
 ## Introduction
 
-Continual learning (CL) methods usually learn from all the available data. However, this is not the case in human cognition, which efficiently focuses on key experiences while disregarding redundant information. Similarly, not all data points in a dataset have equal potential; some can be more informative than others. This disparity may significantly impact performance, as both the quality and quantity of samples directly influence the model’s effectiveness and efficiency.
-
-Drawing inspiration from this, we explore the potential of learning from important samples, and present a benchmark for evaluating coreset selection techniques in the context of CL to stimulate research in this unexplored area.We train different continual9learners on increasing amounts of selected samples and investigate the learning-forgetting dynamics by shedding light on the underlying mechanisms driving their improved stability-plasticity balance. 
-
-We present several significant observations:
-1. Learning from selectively chosen samples enhances incremental accuracy.
-2. Retains knowledge.
-3. Improves learned representations of previous tasks.
+Continual Learning (CL) addresses the challenge of enabling models to adapt to evolving data and tasks while retaining previously acquired knowledge. The main challenge in this paradigm is catastrophic forgetting, where models lose prior knowledge upon learning new tasks. While much of the CL literature has focused on model-centric innovations, we argue for the substantial potential of a data-centric approach, specifically by revisiting the "learn-it-all" assumption prevalent in current CL paradigms. This paper presents the first empirical study systematically evaluating the impact of different coreset methods for training samples in combination with CL methods. Unlike conventional uses of coreset selection limited to a memory buffer, we explore its broader potential to reduce the overall training set. Our comprehensive analysis reveals that training on carefully selected coreset substantially enhances incremental accuracy while reducing computational overhead. We demonstrate that this performance improvement is primarily driven by an improved stability-plasticity trade-off, largely attributable to the enhanced retention of prior knowledge. This study not only highlights the significant benefits of data-centric strategies in CL but also advocates for a shift in research focus towards these approaches to stimulate and guide future advancements in the field.
 
 This benchmark contributes to a deeper understanding of selective learning strategies in CL scenarios. We built upon the [PYCIL library](https://github.com/G-U-N/PyCIL) and use [DeepCore](https://github.com/PatrickZH/DeepCore) for the coreset selection methods. We thank these repositories for providing helpful components.
 
